@@ -1,0 +1,22 @@
+model_name: 'VQ-VAE'
+ckpt_dir: 'checkpoints/'
+vqvae_path: 'checkpoints/model_epoch_40.pth'
+img_shape: [1, 28, 28]
+num_workers: 1
+h_dim: 48
+n_e: 32
+device: 'cuda'
+lr: 1e-3
+batch_size: 64
+n_epochs: 40
+l_w_embedding: 1
+l_w_commitment: 0.25
+pixelcnn:
+  n_blocks: 15
+  dim: 128
+  linear_dim: 32
+  lr: 1e-3
+  n_epochs: 50
+  batch_size: 64
+  pixelcnn_path: 'checkpoints/pixelcnn_epoch_40.pth'
+
